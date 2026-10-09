@@ -170,12 +170,10 @@
 </head>
 <body class="min-h-full flex flex-col justify-between bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30 selection:text-white">
 
-    <!-- ================= LIVE SEED PRELOADER ================= -->
+    <!-- LIVE SEED PRELOADER -->
     <div id="ls-preloader-v1">
         <div class="bio-aura"></div>
-
         <div class="bio-container">
-            <!-- Pulsing Seed Core -->
             <div class="seed-wrapper">
                 <div class="seed-aura ring-a"></div>
                 <div class="seed-aura ring-b"></div>
@@ -186,17 +184,13 @@
                     </svg>
                 </div>
             </div>
-
-            <!-- Typography & Clean Track -->
             <div class="brand-block">
                 <h1 class="brand-text">LIVE SEED</h1>
                 <span class="sub-text">NURTURING DIGITAL GROWTH</span>
             </div>
-
             <div class="track-bar">
                 <div class="fill-bar" id="ls-fill-v1"></div>
             </div>
-            
             <div class="counter-display" id="ls-count-v1">00%</div>
         </div>
     </div>
@@ -204,22 +198,21 @@
     <header class="border-b border-slate-800/80 bg-slate-900/70 backdrop-blur-md sticky top-0 z-30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-600/20">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-emerald-600/20">
                     <i class="fa-solid fa-envelope-circle-check text-base"></i>
                 </div>
                 <div>
                     <h1 class="font-bold text-sm sm:text-base tracking-tight text-white flex items-center gap-2">
-                        Deliverability Monitor
-                        <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Multi-Node</span>
+                        Inbox Validator
+                        <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">4-Node Check</span>
                     </h1>
-                    <p class="text-[11px] text-slate-400">Cluster Monitoring &bull; <span class="text-rose-400 font-medium">Spam in any account flags Spam</span></p>
+                    <p class="text-[11px] text-slate-400">Filtering <span class="text-emerald-400 font-medium">Inboxed-Only Subjects</span> across accounts</p>
                 </div>
             </div>
 
-            <!-- Active Nodes Badge -->
             <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-xs">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-slate-300 font-medium">4 Target Accounts</span>
+                <span class="text-slate-300 font-medium">4 Seed Accounts</span>
             </div>
         </div>
     </header>
@@ -230,7 +223,7 @@
         <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
             <div class="flex items-center justify-between mb-2.5">
                 <label for="domain-input" class="text-xs uppercase tracking-wider font-bold text-slate-300 flex items-center gap-2">
-                    <i class="fa-solid fa-globe text-indigo-400"></i> Sender Domain or Email
+                    <i class="fa-solid fa-globe text-emerald-400"></i> Sender Domain or Email
                 </label>
                 <span class="text-[11px] text-slate-400 flex items-center gap-1.5">
                     <i class="fa-solid fa-bolt text-amber-400 text-xs"></i> Auto-fetches immediately upon pasting
@@ -241,8 +234,8 @@
                 <input 
                     id="domain-input" 
                     type="text" 
-                    placeholder="Paste domain here (e.g. stripe.com, newsletter@domain.com)..."
-                    class="w-full bg-slate-950/80 border-2 border-slate-700/80 hover:border-slate-600 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/15 rounded-xl px-4 py-3.5 pr-28 text-white font-mono text-sm sm:text-base placeholder:text-slate-500 transition-all outline-none"
+                    placeholder="Paste domain here (e.g. example.com, newsletter@domain.com)..."
+                    class="w-full bg-slate-950/80 border-2 border-slate-700/80 hover:border-slate-600 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/15 rounded-xl px-4 py-3.5 pr-28 text-white font-mono text-sm sm:text-base placeholder:text-slate-500 transition-all outline-none"
                     autocomplete="off"
                     spellcheck="false"
                 >
@@ -250,144 +243,112 @@
                     <button 
                         id="btn-scan" 
                         type="button" 
-                        class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white rounded-lg text-xs font-semibold tracking-wide transition-colors flex items-center gap-1.5 shadow-sm shadow-indigo-600/30">
+                        class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white rounded-lg text-xs font-semibold tracking-wide transition-colors flex items-center gap-1.5 shadow-sm shadow-emerald-600/30">
                         <i class="fa-solid fa-magnifying-glass text-[11px]"></i>
-                        <span>Check</span>
+                        <span>Scan</span>
                     </button>
                 </div>
             </div>
 
             <div class="mt-2.5 flex items-center justify-between text-[11px] text-slate-500">
-                <span>Tip: Copy any sender address and paste with <kbd class="px-1.5 py-0.5 bg-slate-800 text-slate-300 rounded border border-slate-700 font-mono text-[10px]">Ctrl+V</kbd>.</span>
+                <span>Tip: Copy sender address and paste with <kbd class="px-1.5 py-0.5 bg-slate-800 text-slate-300 rounded border border-slate-700 font-mono text-[10px]">Ctrl+V</kbd>.</span>
                 <button id="btn-clear" type="button" class="hover:text-slate-300 transition-colors flex items-center gap-1">
                     <i class="fa-solid fa-trash-can text-[10px]"></i> Clear
                 </button>
             </div>
         </section>
 
+        <!-- Loading State -->
         <div id="loading-state" class="hidden">
             <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center flex flex-col items-center justify-center space-y-3">
-                <div class="w-10 h-10 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin"></div>
-                <div class="text-sm font-medium text-slate-300">Scanning accounts across <span class="text-indigo-400 font-mono font-semibold">ashwindelaycheck</span> and node cluster...</div>
-                <p id="loading-details" class="text-xs text-slate-500">Retrieving payload & evaluating folder destinations...</p>
+                <div class="w-10 h-10 rounded-full border-2 border-emerald-500/20 border-t-emerald-500 animate-spin"></div>
+                <div class="text-sm font-medium text-slate-300">Searching all 4 accounts for inboxed emails...</div>
+                <p id="loading-details" class="text-xs text-slate-500">Evaluating message destinations and isolating Inbox placements...</p>
             </div>
         </div>
 
+        <!-- Empty State -->
         <div id="empty-state" class="bg-slate-900/40 border border-dashed border-slate-800 rounded-2xl p-10 sm:p-14 text-center">
             <div class="w-14 h-14 mx-auto rounded-2xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-slate-400 mb-4">
                 <i class="fa-solid fa-inbox text-2xl"></i>
             </div>
             <h2 class="text-base font-semibold text-slate-200">Awaiting Target Domain</h2>
             <p class="text-xs text-slate-400 max-w-md mx-auto mt-1.5 leading-relaxed">
-                Paste any sender domain above to instantly determine the subject line, the verified landing destination via <strong class="text-slate-300">ashwindelaycheck</strong>, cluster inboxing rates, and view the entire email.
+                Paste any domain or sender to display only inboxed subject lines, identify subjects inboxed across all 4 accounts, and inspect full mail contents.
             </p>
         </div>
 
+        <!-- Error Card -->
         <div id="error-card" class="hidden bg-rose-950/30 border border-rose-800/60 rounded-2xl p-6 sm:p-8 text-center">
             <div class="w-12 h-12 rounded-xl bg-rose-900/40 text-rose-400 border border-rose-700/50 flex items-center justify-center mx-auto mb-3">
                 <i class="fa-solid fa-triangle-exclamation text-xl"></i>
             </div>
-            <h3 id="error-title" class="text-base font-bold text-rose-300">No Emails Found</h3>
+            <h3 id="error-title" class="text-base font-bold text-rose-300">No Inboxed Emails Found</h3>
             <p id="error-message" class="text-xs text-slate-400 max-w-md mx-auto mt-1.5 leading-relaxed">
-                No recent messages from this domain were found.
+                No messages from this domain landed in the Inbox.
             </p>
         </div>
 
+        <!-- Main Results Container -->
         <div id="result-container" class="hidden space-y-6">
 
-            <!-- 1. Auto-populated Subject Line Bar -->
-            <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs uppercase tracking-wider font-bold text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-heading text-indigo-400"></i> Subject Line
-                    </span>
-                    <span id="scan-timestamp" class="text-[11px] font-mono text-slate-500">Updated just now</span>
-                </div>
-
-                <div class="flex items-center gap-2">
-                    <div class="relative flex-1">
-                        <input 
-                            id="result-subject" 
-                            type="text" 
-                            readonly 
-                            class="w-full bg-slate-950 border border-slate-700/70 rounded-xl px-4 py-3 text-white font-semibold text-sm sm:text-base focus:outline-none select-all truncate pr-10"
-                            value=""
-                        >
-                    </div>
-                    <button 
-                        id="btn-copy-subject" 
-                        type="button" 
-                        title="Copy Subject Line"
-                        class="px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-2 shrink-0">
-                        <i class="fa-regular fa-copy"></i>
-                        <span class="hidden sm:inline text-xs font-semibold">Copy</span>
-                    </button>
-                </div>
-            </section>
-
-            <!-- 2. Master Landing Box (Triggered Strictly from ashwindelaycheck) -->
-            <section id="landing-card" class="rounded-2xl border p-6 sm:p-7 transition-all duration-300 shadow-xl">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
-                    
-                    <!-- Left: Landing Status Banner -->
-                    <div class="flex items-start sm:items-center gap-4">
-                        <div id="landing-icon-badge" class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-lg">
-                            <i id="landing-icon" class="fa-solid fa-inbox"></i>
+            <!-- 1. Universal / 4-Account Inboxed Subject Lines Section -->
+            <section id="universal-inbox-section" class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-800">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                         <div>
-                            <div id="landing-badge-label" class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2 mb-0.5">
-                                Primary Landing
-                            </div>
-                            <h3 id="landing-title" class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                                INBOX
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+                                Inboxed in All 4 Accounts (100% Cluster Pass)
                             </h3>
-                            <p id="landing-desc" class="text-xs text-slate-300 mt-1">
-                                Delivery confirmed directly to Primary Inbox.
-                            </p>
+                            <p class="text-[11px] text-slate-400">Subject lines that successfully landed in the Inbox across every monitored node</p>
                         </div>
                     </div>
-
-                    <!-- Right: Delivery Timing Metrics -->
-                    <div class="flex flex-row md:flex-col items-center md:items-end justify-between border-t md:border-t-0 border-slate-700/60 pt-4 md:pt-0">
-                        <div class="text-left md:text-right">
-                            <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Delay / Received</span>
-                            <div id="delay-seconds" class="text-xl sm:text-2xl font-extrabold font-mono text-white">
-                                0s ago
-                            </div>
-                        </div>
-                        <div id="email-date-formatted" class="text-xs text-slate-400 font-mono mt-1">
-                            --
-                        </div>
-                    </div>
+                    <span id="all-four-count-badge" class="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 w-fit">
+                        0 Subjects
+                    </span>
                 </div>
 
-                <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-                    <div>
-                        Sender: <strong id="meta-sender" class="text-slate-200 font-mono font-medium">--</strong>
-                    </div>
-                    <div>
-                        Cluster Verdict: <span id="cluster-verdict-summary" class="font-mono text-indigo-400 font-semibold">--</span>
-                    </div>
+                <div id="all-four-subjects-list" class="space-y-2.5">
+                    <!-- Populated dynamically -->
                 </div>
             </section>
 
-            <!-- 3. Account-by-Account Inboxing Status -->
+            <!-- 2. All Inboxed Subjects (Grouped by Subject) -->
             <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
                     <div>
                         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
-                            <i class="fa-solid fa-server text-indigo-400"></i> Account Inboxing Status
+                            <i class="fa-solid fa-list-check text-indigo-400"></i> All Inboxed Subject Lines
                         </h4>
-                        <p class="text-[11px] text-slate-500 mt-0.5">Inbox vs Spam breakdown across all 4 configured accounts</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Filtered list of subjects that reached Inbox (Spam excluded)</p>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <span id="cluster-inbox-rate" class="px-3 py-1 rounded-lg bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 text-xs font-bold font-mono">
-                            0% Inboxed
-                        </span>
-                    </div>
+                    <span id="total-inboxed-subjects-badge" class="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
+                        0 Inboxed
+                    </span>
                 </div>
 
-                <!-- Account Status Cards / Table -->
+                <div id="all-inboxed-list" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+            </section>
+
+            <!-- 3. Account-by-Account Breakdown -->
+            <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
+                <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+                            <i class="fa-solid fa-server text-indigo-400"></i> Account Status Summary
+                        </h4>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Individual accounts and their latest landing status</p>
+                    </div>
+                    <span id="cluster-inbox-rate" class="px-3 py-1 rounded-lg text-xs font-bold font-mono">
+                        0%
+                    </span>
+                </div>
+
                 <div class="overflow-x-auto custom-scrollbar">
                     <table class="w-full text-left border-collapse">
                         <thead>
@@ -395,22 +356,22 @@
                                 <th class="pb-3 pr-4">Account Node</th>
                                 <th class="pb-3 px-4">Role</th>
                                 <th class="pb-3 px-4">Inboxing Status</th>
-                                <th class="pb-3 px-4">Delivery Delay</th>
-                                <th class="pb-3 pl-4 text-right">View Mail</th>
+                                <th class="pb-3 px-4">Subject Inboxed</th>
+                                <th class="pb-3 pl-4 text-right">Inspect Mail</th>
                             </tr>
                         </thead>
                         <tbody id="accounts-status-body" class="divide-y divide-slate-800/80 text-xs">
-                            <!-- Populated dynamically via JS -->
+                            <!-- Populated dynamically -->
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- 4. Complete Email Content Viewer (Whole Email, not snippet) -->
+            <!-- 4. Complete Email Content Viewer -->
             <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
                             <i class="fa-solid fa-envelope-open-text text-sm"></i>
                         </div>
                         <div>
@@ -418,19 +379,15 @@
                                 Whole Email Preview
                             </h4>
                             <p class="text-[11px] text-slate-400">
-                                Showing full email from <span id="previewing-account-label" class="text-indigo-400 font-mono font-medium">ashwindelaycheck</span>
+                                Viewing mail from <span id="previewing-account-label" class="text-emerald-400 font-mono font-medium">--</span>
                             </p>
                         </div>
                     </div>
-
-                    <div class="flex items-center gap-2">
-                        <span id="email-format-badge" class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-800 text-slate-300 border border-slate-700">
-                            HTML Email
-                        </span>
-                    </div>
+                    <span id="email-format-badge" class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+                        HTML Email
+                    </span>
                 </div>
 
-                <!-- Header Metadata Box -->
                 <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3.5 mb-4 text-xs space-y-1.5 text-slate-400">
                     <div class="flex items-start gap-2">
                         <span class="font-bold text-slate-500 uppercase text-[10px] w-14 shrink-0 pt-0.5">From:</span>
@@ -446,7 +403,6 @@
                     </div>
                 </div>
 
-                <!-- Full HTML Email Sandbox Container -->
                 <div class="relative bg-white rounded-xl overflow-hidden shadow-inner border border-slate-300">
                     <iframe 
                         id="full-email-frame" 
@@ -454,7 +410,6 @@
                         sandbox="allow-same-origin" 
                         title="Whole Email Viewer">
                     </iframe>
-                    <!-- Plain text fallback container if no HTML available -->
                     <div 
                         id="full-email-text-fallback" 
                         class="hidden p-6 text-slate-900 bg-white font-mono text-xs whitespace-pre-wrap leading-relaxed max-h-[520px] overflow-y-auto custom-scrollbar">
@@ -466,6 +421,7 @@
 
     </main>
 
+    <!-- Toast Component -->
     <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-12 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-slate-800 text-white border border-slate-700 px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 text-xs font-medium">
             <i id="toast-icon" class="fa-solid fa-check text-emerald-400"></i>
@@ -474,17 +430,16 @@
     </div>
 
     <footer class="border-t border-slate-800/80 py-4 text-center text-xs text-slate-500">
-        Deliverability Node Monitor &copy; ashwindelaycheck
+        Deliverability Node Monitor &bull; Inbox Filtration Engine
     </footer>
 
     <script>
-        // Live Seed Preloader Execution Controller
+        // Preloader Controller
         (function() {
             let p = 0;
             const bar = document.getElementById('ls-fill-v1');
             const cnt = document.getElementById('ls-count-v1');
             const wrap = document.getElementById('ls-preloader-v1');
-
             if (!bar || !cnt || !wrap) return;
 
             const step = setInterval(() => {
@@ -510,7 +465,6 @@
                 setTimeout(completeAndDismiss, 500);
             } else {
                 window.addEventListener('load', completeAndDismiss);
-                // Safety timeout fallback
                 setTimeout(completeAndDismiss, 2000);
             }
         })();
@@ -520,7 +474,6 @@
         const CONFIG = {
             clientId: "707901165841-938emg3s0i65g4j1nebqqf33kr65rblp.apps.googleusercontent.com",
             clientSecret: "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",
-            primaryAccountName: "ashwindelaycheck",
             accounts: [
                 { name: "ashwindelaycheck", type: "Opener", token: "1//0gufI0Kvut_L4CgYIARAAGBASNwF-L9IrCP4euif3CzkRhJnPmOiRCGAVFBisqIB1lyS8m_O6a8BwKA71fkbqQ90wnpn_HdLG-NA" },
                 { name: "kartikdelaycheck", type: "Opener", token: "1//0gG08sb6H3p89CgYIARAAGBASNwF-L9IrATWaA7E1Z7v1jdg0elGLrPSO4CA7sOtS3nCxoqhZQDK65EKJKdMXXV7gwVJQEas2HYw" },
@@ -537,25 +490,18 @@
             loadingDetails: document.getElementById('loading-details'),
             emptyState: document.getElementById('empty-state'),
             resultContainer: document.getElementById('result-container'),
-            resultSubject: document.getElementById('result-subject'),
-            btnCopySubject: document.getElementById('btn-copy-subject'),
-            scanTimestamp: document.getElementById('scan-timestamp'),
-            
-            // Primary Landing UI
-            landingCard: document.getElementById('landing-card'),
-            landingIconBadge: document.getElementById('landing-icon-badge'),
-            landingIcon: document.getElementById('landing-icon'),
-            landingTitle: document.getElementById('landing-title'),
-            landingDesc: document.getElementById('landing-desc'),
-            delaySeconds: document.getElementById('delay-seconds'),
-            emailDateFormatted: document.getElementById('email-date-formatted'),
-            metaSender: document.getElementById('meta-sender'),
 
-            // Accounts status UI
+            // Universal & Inboxed lists
+            allFourSubjectsList: document.getElementById('all-four-subjects-list'),
+            allFourCountBadge: document.getElementById('all-four-count-badge'),
+            allInboxedList: document.getElementById('all-inboxed-list'),
+            totalInboxedSubjectsBadge: document.getElementById('total-inboxed-subjects-badge'),
+
+            // Account status
             accountsStatusBody: document.getElementById('accounts-status-body'),
             clusterInboxRate: document.getElementById('cluster-inbox-rate'),
 
-            // Full email preview elements
+            // Mail Preview
             previewingAccountLabel: document.getElementById('previewing-account-label'),
             emailFormatBadge: document.getElementById('email-format-badge'),
             fullMetaFrom: document.getElementById('full-meta-from'),
@@ -573,16 +519,13 @@
             toastIcon: document.getElementById('toast-icon')
         };
 
-        // Cache tokens in memory per refresh token
         const tokenCache = new Map();
 
         async function getAccessTokenFor(refreshToken) {
             const now = Date.now();
             if (tokenCache.has(refreshToken)) {
                 const item = tokenCache.get(refreshToken);
-                if (now < item.expiry - 60000) {
-                    return item.token;
-                }
+                if (now < item.expiry - 60000) return item.token;
             }
 
             try {
@@ -598,16 +541,14 @@
                 });
 
                 const data = await res.json();
-                if (data.error) {
-                    throw new Error(data.error_description || data.error);
-                }
+                if (data.error) throw new Error(data.error_description || data.error);
 
                 const token = data.access_token;
                 const expiry = now + (data.expires_in || 3600) * 1000;
                 tokenCache.set(refreshToken, { token, expiry });
                 return token;
             } catch (err) {
-                console.error("Auth error for token:", err);
+                console.error("Auth error:", err);
                 throw err;
             }
         }
@@ -633,37 +574,32 @@
             }
         }
 
-        // Extracts both rich HTML and plain text bodies completely
         function extractFullEmailBodies(payload) {
             let htmlBody = "";
             let textBody = "";
 
             function traverse(part) {
                 if (!part) return;
-                if (part.mimeType === 'text/html' && part.body && part.body.data) {
+                if (part.mimeType === 'text/html' && part.body?.data) {
                     htmlBody = decodeBase64(part.body.data);
                 }
-                if (part.mimeType === 'text/plain' && part.body && part.body.data) {
+                if (part.mimeType === 'text/plain' && part.body?.data) {
                     textBody = decodeBase64(part.body.data);
                 }
                 if (part.parts && Array.isArray(part.parts)) {
-                    for (const subPart of part.parts) {
-                        traverse(subPart);
-                    }
+                    for (const subPart of part.parts) traverse(subPart);
                 }
             }
 
             if (payload) {
-                if (payload.body && payload.body.data) {
+                if (payload.body?.data) {
                     if (payload.mimeType === 'text/html') {
                         htmlBody = decodeBase64(payload.body.data);
                     } else {
                         textBody = decodeBase64(payload.body.data);
                     }
                 }
-                if (payload.parts) {
-                    traverse(payload);
-                }
+                if (payload.parts) traverse(payload);
             }
 
             return { htmlBody, textBody };
@@ -674,18 +610,15 @@
                 const token = await getAccessTokenFor(acc.token);
                 const q = encodeURIComponent(`${domain}`);
                 
-                // includeSpamTrash=true is required to ensure messages filtered to SPAM are returned
                 const listRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages?q=${q}&includeSpamTrash=true&maxResults=1`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
-                if (!listRes.ok) {
-                    return { acc, status: 'ERROR', error: 'API Error' };
-                }
+                if (!listRes.ok) return { acc, status: 'ERROR', error: 'API Error' };
 
                 const listData = await listRes.json();
                 if (!listData.messages || listData.messages.length === 0) {
-                    return { acc, status: 'NO_MAIL', subject: null };
+                    return { acc, status: 'NO_MAIL', subject: null, landing: 'NONE' };
                 }
 
                 const messageId = listData.messages[0].id;
@@ -693,9 +626,7 @@
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
-                if (!msgRes.ok) {
-                    return { acc, status: 'ERROR', error: 'Fetch failed' };
-                }
+                if (!msgRes.ok) return { acc, status: 'ERROR', error: 'Fetch failed' };
 
                 const msgData = await msgRes.json();
                 const headers = msgData.payload?.headers || [];
@@ -715,10 +646,7 @@
                 const emailDate = new Date(dateHeader);
                 const isValidDate = !isNaN(emailDate.getTime());
                 const now = Date.now();
-                let secondsAgo = 0;
-                if (isValidDate) {
-                    secondsAgo = Math.max(0, Math.floor((now - emailDate.getTime()) / 1000));
-                }
+                const secondsAgo = isValidDate ? Math.max(0, Math.floor((now - emailDate.getTime()) / 1000)) : 0;
 
                 const { htmlBody, textBody } = extractFullEmailBodies(msgData.payload);
 
@@ -726,7 +654,8 @@
                     acc,
                     status: 'FOUND',
                     landing,
-                    subject,
+                    isInboxed: landing === 'INBOX',
+                    subject: subject.trim(),
                     sender,
                     dateHeader,
                     dateObj: isValidDate ? emailDate : new Date(),
@@ -735,8 +664,219 @@
                     textBody: textBody || msgData.snippet || ""
                 };
             } catch (err) {
-                return { acc, status: 'ERROR', error: err.message || 'Auth Error' };
+                return { acc, status: 'ERROR', error: err.message || 'Auth Error', landing: 'ERROR' };
             }
+        }
+
+        let globalScanResults = [];
+
+        function renderResults(results) {
+            globalScanResults = results;
+            dom.loadingState.classList.add('hidden');
+            dom.emptyState.classList.add('hidden');
+            dom.errorCard.classList.add('hidden');
+
+            // 1. FILTER ONLY INBOXED EMAILS
+            const inboxedResults = results.filter(r => r.status === 'FOUND' && r.landing === 'INBOX');
+
+            if (inboxedResults.length === 0) {
+                showError(
+                    "No Inboxed Subjects Found",
+                    "Messages were either not found or filtered directly into SPAM / JUNK across all accounts."
+                );
+                return;
+            }
+
+            dom.resultContainer.classList.remove('hidden');
+
+            // 2. GROUP INBOXED RESULTS BY NORMALIZED SUBJECT
+            const subjectMap = new Map();
+            inboxedResults.forEach(item => {
+                const subKey = item.subject.toLowerCase();
+                if (!subjectMap.has(subKey)) {
+                    subjectMap.set(subKey, {
+                        displaySubject: item.subject,
+                        accounts: [],
+                        items: []
+                    });
+                }
+                subjectMap.get(subKey).accounts.push(item.acc.name);
+                subjectMap.get(subKey).items.push(item);
+            });
+
+            // 3. IDENTIFY SUBJECTS INBOXED ACROSS ALL 4 ACCOUNTS
+            const totalAccountsCount = CONFIG.accounts.length;
+            const allFourSubjects = [];
+            const otherInboxedSubjects = [];
+
+            subjectMap.forEach(group => {
+                // If accounts with this inboxed subject equals all configured accounts (4)
+                if (group.accounts.length === totalAccountsCount) {
+                    allFourSubjects.push(group);
+                } else {
+                    otherInboxedSubjects.push(group);
+                }
+            });
+
+            // Render Universal (All 4 Accounts) Subjects
+            dom.allFourSubjectsList.innerHTML = '';
+            dom.allFourCountBadge.textContent = `${allFourSubjects.length} of ${subjectMap.size} Subject(s)`;
+
+            if (allFourSubjects.length > 0) {
+                allFourSubjects.forEach((group, idx) => {
+                    const row = document.createElement('div');
+                    row.className = "p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md";
+                    
+                    row.innerHTML = `
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                    4/4 Inboxed
+                                </span>
+                                <span class="text-[11px] text-slate-400 font-mono">Matched all cluster nodes</span>
+                            </div>
+                            <p class="font-semibold text-white text-sm sm:text-base truncate select-all">
+                                ${escapeHtml(group.displaySubject)}
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <button 
+                                type="button" 
+                                onclick="copyText('${escapeQuotes(group.displaySubject)}')"
+                                class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 active:bg-slate-900 border border-slate-700 rounded-lg text-xs font-semibold text-slate-200 transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Copy</span>
+                            </button>
+                            <button 
+                                type="button" 
+                                onclick="previewEmailByItemIndex(${results.indexOf(group.items[0])})"
+                                class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-eye"></i>
+                                <span>Inspect</span>
+                            </button>
+                        </div>
+                    `;
+                    dom.allFourSubjectsList.appendChild(row);
+                });
+            } else {
+                dom.allFourSubjectsList.innerHTML = `
+                    <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 text-center text-xs text-slate-500">
+                        <i class="fa-solid fa-circle-info mr-1 text-slate-400"></i>
+                        No single subject line was inboxed in all 4 accounts simultaneously.
+                    </div>
+                `;
+            }
+
+            // Render All Inboxed Subjects List
+            dom.allInboxedList.innerHTML = '';
+            dom.totalInboxedSubjectsBadge.textContent = `${subjectMap.size} Unique Subject(s)`;
+
+            subjectMap.forEach(group => {
+                const isFullCluster = group.accounts.length === totalAccountsCount;
+                const card = document.createElement('div');
+                card.className = "p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-3 hover:border-slate-700 transition-colors";
+
+                const accountBadges = group.accounts.map(acc => 
+                    `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${acc}</span>`
+                ).join(' ');
+
+                card.innerHTML = `
+                    <div class="flex-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-1.5 mb-1.5">
+                            ${isFullCluster 
+                                ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">100% Inboxed</span>`
+                                : `<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-800 text-slate-300 border border-slate-700">${group.accounts.length}/${totalAccountsCount} Inboxed</span>`
+                            }
+                            <span class="text-xs text-slate-500">Nodes:</span>
+                            ${accountBadges}
+                        </div>
+                        <p class="font-semibold text-slate-100 text-sm truncate select-all">
+                            ${escapeHtml(group.displaySubject)}
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button 
+                            type="button" 
+                            onclick="copyText('${escapeQuotes(group.displaySubject)}')"
+                            class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 text-xs font-medium transition-colors flex items-center gap-1.5">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                        <button 
+                            type="button" 
+                            onclick="previewEmailByItemIndex(${results.indexOf(group.items[0])})"
+                            class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-indigo-400 rounded-lg border border-slate-700 text-xs font-medium transition-colors flex items-center gap-1.5">
+                            <i class="fa-solid fa-envelope-open"></i>
+                            <span>View</span>
+                        </button>
+                    </div>
+                `;
+                dom.allInboxedList.appendChild(card);
+            });
+
+            // 4. Render Account Status Table
+            dom.accountsStatusBody.innerHTML = '';
+            let inboxCount = 0;
+
+            results.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-800/40 transition-colors";
+
+                const roleBadge = item.acc.type === "Opener"
+                    ? `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Opener</span>`
+                    : `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-400 border border-slate-700">Non-Opener</span>`;
+
+                let statusBadge = '';
+                let subjectCol = '<span class="text-slate-500 italic">None</span>';
+
+                if (item.status === 'FOUND') {
+                    if (item.landing === 'INBOX') {
+                        inboxCount++;
+                        statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> INBOX
+                        </span>`;
+                        subjectCol = `<span class="font-medium text-slate-200 truncate block max-w-xs">${escapeHtml(item.subject)}</span>`;
+                    } else {
+                        statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> ${item.landing}
+                        </span>`;
+                        subjectCol = `<span class="text-rose-400 text-xs italic">Excluded (${item.landing})</span>`;
+                    }
+                } else if (item.status === 'NO_MAIL') {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-400 border border-slate-700">No Mail</span>`;
+                } else {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-rose-500/15 text-rose-400 border border-rose-500/30">Error</span>`;
+                }
+
+                const viewBtn = (item.status === 'FOUND' && item.landing === 'INBOX')
+                    ? `<button type="button" onclick="previewEmailByItemIndex(${index})" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-[11px] text-slate-200 font-medium transition-colors">
+                        Inspect
+                    </button>`
+                    : `<span class="text-slate-600 text-xs">-</span>`;
+
+                tr.innerHTML = `
+                    <td class="py-3 pr-4 font-mono font-medium text-slate-200">${item.acc.name}</td>
+                    <td class="py-3 px-4">${roleBadge}</td>
+                    <td class="py-3 px-4">${statusBadge}</td>
+                    <td class="py-3 px-4">${subjectCol}</td>
+                    <td class="py-3 pl-4 text-right">${viewBtn}</td>
+                `;
+                dom.accountsStatusBody.appendChild(tr);
+            });
+
+            // Cluster Inboxing Ratio Badge
+            const percentage = Math.round((inboxCount / totalAccountsCount) * 100);
+            dom.clusterInboxRate.textContent = `${percentage}% Inboxed (${inboxCount}/${totalAccountsCount})`;
+            if (percentage === 100) {
+                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold font-mono";
+            } else if (percentage >= 50) {
+                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold font-mono";
+            } else {
+                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold font-mono";
+            }
+
+            // Preview initial inboxed email
+            displayWholeEmail(inboxedResults[0]);
         }
 
         function displayWholeEmail(item) {
@@ -752,7 +892,6 @@
                 dom.fullEmailTextFallback.classList.add('hidden');
                 dom.fullEmailFrame.classList.remove('hidden');
 
-                // Sandboxed CSS to avoid breaking preview layout and disable external navigation
                 const safeWrap = `
                     <!DOCTYPE html>
                     <html>
@@ -767,14 +906,8 @@
                                 line-height: 1.5;
                                 word-break: break-word;
                             }
-                            a, button, input {
-                                pointer-events: none !important;
-                                cursor: default !important;
-                            }
-                            img {
-                                max-width: 100% !important;
-                                height: auto !important;
-                            }
+                            a, button, input { pointer-events: none !important; cursor: default !important; }
+                            img { max-width: 100% !important; height: auto !important; }
                         </style>
                     </head>
                     <body>
@@ -791,191 +924,40 @@
             }
         }
 
-        let globalScanResults = [];
-
-        function formatDelayText(secondsAgo) {
-            if (secondsAgo < 60) return `${secondsAgo}s ago`;
-            if (secondsAgo < 3600) {
-                const m = Math.floor(secondsAgo / 60);
-                const s = secondsAgo % 60;
-                return `${m}m ${s}s ago`;
-            }
-            const h = Math.floor(secondsAgo / 3600);
-            const m = Math.floor((secondsAgo % 3600) / 60);
-            return `${h}h ${m}m ago`;
-        }
-
-        function renderResults(results) {
-            globalScanResults = results;
-            dom.loadingState.classList.add('hidden');
-            dom.emptyState.classList.add('hidden');
-            dom.errorCard.classList.add('hidden');
-            dom.resultContainer.classList.remove('hidden');
-
-            // Find primary account (ashwindelaycheck)
-            const primaryResult = results.find(r => r.acc.name === CONFIG.primaryAccountName);
-
-            if (!primaryResult || primaryResult.status !== 'FOUND') {
-                // If primary has no mail, look if any other account found anything
-                const anyFound = results.find(r => r.status === 'FOUND');
-                if (!anyFound) {
-                    showError(
-                        "No Emails Found",
-                        `No incoming messages found from the requested sender across the account cluster.`
-                    );
-                    return;
-                }
-            }
-
-            // Reference target for subject & landing: ashwindelaycheck (or fallback to first available if not found)
-            const targetAccountResult = (primaryResult && primaryResult.status === 'FOUND') 
-                ? primaryResult 
-                : results.find(r => r.status === 'FOUND');
-
-            // 1. Directly puts the subject line in the subject line box
-            dom.resultSubject.value = targetAccountResult.subject || "(No Subject)";
-            dom.scanTimestamp.textContent = `Audited: ${new Date().toLocaleTimeString()}`;
-
-            // Check if ANY account landed in spam
-            const foundAccounts = results.filter(r => r.status === 'FOUND');
-            const spamAccounts = foundAccounts.filter(r => r.landing === 'SPAM');
-            const hasSpam = spamAccounts.length > 0;
-
-            const delaySec = primaryResult?.secondsAgo ?? targetAccountResult.secondsAgo;
-            dom.delaySeconds.textContent = formatDelayText(delaySec);
-            dom.emailDateFormatted.textContent = targetAccountResult.dateObj.toLocaleString([], {
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false
-            });
-            dom.metaSender.textContent = targetAccountResult.sender;
-
-            const clusterVerdictSummary = document.getElementById('cluster-verdict-summary');
-            const landingBadgeLabel = document.getElementById('landing-badge-label');
-
-            if (hasSpam) {
-                // If mail is spam in ANY of the accounts, display SPAM
-                const spamNames = spamAccounts.map(r => r.acc.name).join(', ');
-                dom.landingCard.className = "rounded-2xl border border-rose-500/50 bg-gradient-to-br from-rose-950/40 via-slate-900 to-slate-900 p-6 sm:p-7 transition-all duration-300 shadow-xl shadow-rose-950/30";
-                dom.landingIconBadge.className = "w-14 h-14 rounded-2xl bg-rose-500/15 text-rose-400 border border-rose-500/30 flex items-center justify-center text-2xl shrink-0 shadow-lg shadow-rose-500/20";
-                dom.landingIcon.className = "fa-solid fa-triangle-exclamation text-rose-400";
-                dom.landingTitle.className = "text-2xl sm:text-3xl font-extrabold tracking-tight text-rose-400 flex items-center gap-2";
-                dom.landingTitle.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-rose-500 text-xl"></i> SPAM / JUNK`;
-                
-                landingBadgeLabel.className = "text-[11px] font-bold uppercase tracking-wider text-rose-400 flex items-center gap-1.5 mb-0.5";
-                landingBadgeLabel.innerHTML = `<i class="fa-solid fa-circle-exclamation text-rose-400"></i> SPAM DETECTED (${spamAccounts.length}/${foundAccounts.length} Nodes)`;
-                
-                dom.landingDesc.innerHTML = `Email landed in <strong class="text-rose-300">SPAM</strong> in account(s): <span class="font-mono text-white font-medium">${spamNames}</span>.`;
-                if (clusterVerdictSummary) {
-                    clusterVerdictSummary.textContent = `Flagged SPAM (${spamAccounts.length} seed${spamAccounts.length > 1 ? 's' : ''})`;
-                    clusterVerdictSummary.className = "font-mono text-rose-400 font-semibold";
-                }
-            } else {
-                // All found emails went to INBOX
-                dom.landingCard.className = "rounded-2xl border border-emerald-500/40 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 p-6 sm:p-7 transition-all duration-300 shadow-xl shadow-emerald-950/20";
-                dom.landingIconBadge.className = "w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-2xl shrink-0 shadow-lg shadow-emerald-500/10";
-                dom.landingIcon.className = "fa-solid fa-inbox text-emerald-400";
-                dom.landingTitle.className = "text-2xl sm:text-3xl font-extrabold tracking-tight text-emerald-400 flex items-center gap-2";
-                dom.landingTitle.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-500 text-xl"></i> INBOX`;
-                
-                landingBadgeLabel.className = "text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5 mb-0.5";
-                landingBadgeLabel.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> 100% CLEAN INBOX LANDING`;
-                
-                dom.landingDesc.textContent = "Delivery confirmed directly to Primary Inbox across all reporting accounts (0 spam detections).";
-                if (clusterVerdictSummary) {
-                    clusterVerdictSummary.textContent = "Clean Inbox Verified";
-                    clusterVerdictSummary.className = "font-mono text-emerald-400 font-semibold";
-                }
-            }
-
-            // 3. Render Account-by-Account Inboxing Status
-            let inboxCount = 0;
-            let totalAccounts = CONFIG.accounts.length;
-
-            dom.accountsStatusBody.innerHTML = '';
-
-            results.forEach((item, index) => {
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-800/40 transition-colors";
-
-                const isPrimary = item.acc.name === CONFIG.primaryAccountName;
-                const roleBadge = item.acc.type === "Opener"
-                    ? `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Opener</span>`
-                    : `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-400 border border-slate-700">Non-Opener</span>`;
-
-                let statusBadge = '';
-                let delayCol = '--';
-
-                if (item.status === 'FOUND') {
-                    if (item.landing === 'INBOX') {
-                        inboxCount++;
-                        statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> INBOX
-                        </span>`;
-                    } else {
-                        statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-500/20 text-rose-400 border border-rose-500/40 animate-pulse">
-                            <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> SPAM
-                        </span>`;
-                    }
-                    delayCol = `<span class="font-mono text-slate-300 font-semibold">${formatDelayText(item.secondsAgo)}</span>`;
-                } else if (item.status === 'NO_MAIL') {
-                    statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-400 border border-slate-700">
-                        No Mail
-                    </span>`;
-                } else {
-                    statusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-rose-500/15 text-rose-400 border border-rose-500/30">
-                        Error
-                    </span>`;
-                }
-
-                const viewBtn = item.status === 'FOUND'
-                    ? `<button type="button" onclick="selectPreviewAccount(${index})" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 active:bg-slate-900 border border-slate-700 rounded-lg text-[11px] text-slate-200 font-medium transition-colors">
-                        Inspect
-                    </button>`
-                    : `<span class="text-slate-600 text-xs">-</span>`;
-
-                tr.innerHTML = `
-                    <td class="py-3 pr-4 font-mono font-medium text-slate-200">
-                        <div class="flex items-center gap-2">
-                            <span>${item.acc.name}</span>
-                            ${isPrimary ? '<span class="text-[10px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">TRIGGER</span>' : ''}
-                        </div>
-                    </td>
-                    <td class="py-3 px-4">${roleBadge}</td>
-                    <td class="py-3 px-4">${statusBadge}</td>
-                    <td class="py-3 px-4">${delayCol}</td>
-                    <td class="py-3 pl-4 text-right">${viewBtn}</td>
-                `;
-
-                dom.accountsStatusBody.appendChild(tr);
-            });
-
-            // Update cluster rate
-            const percentage = Math.round((inboxCount / totalAccounts) * 100);
-            dom.clusterInboxRate.textContent = `${percentage}% Inboxed (${inboxCount}/${totalAccounts})`;
-            if (hasSpam) {
-                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/40 text-xs font-bold font-mono";
-            } else if (percentage >= 75) {
-                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold font-mono";
-            } else if (percentage >= 50) {
-                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold font-mono";
-            } else {
-                dom.clusterInboxRate.className = "px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold font-mono";
-            }
-
-            // 4. Show the whole email in the box (defaults to ashwindelaycheck or first found)
-            displayWholeEmail(targetAccountResult);
-        }
-
-        window.selectPreviewAccount = function(index) {
+        window.previewEmailByItemIndex = function(index) {
             if (globalScanResults && globalScanResults[index]) {
                 displayWholeEmail(globalScanResults[index]);
                 dom.previewingAccountLabel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         };
+
+        window.copyText = function(text) {
+            if (!text) return;
+            const temp = document.createElement('textarea');
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            try {
+                document.execCommand('copy');
+                showToast("Subject line copied!");
+            } catch (err) {
+                showToast("Failed to copy", true);
+            }
+            document.body.removeChild(temp);
+        };
+
+        function escapeHtml(str) {
+            return (str || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function escapeQuotes(str) {
+            return (str || '').replace(/'/g, "\\'").replace(/"/g, '\\"');
+        }
 
         function showError(title, message) {
             dom.loadingState.classList.add('hidden');
@@ -1007,7 +989,6 @@
 
             dom.domainInput.value = cleanDomain;
 
-            // Transition UI to loading state
             dom.emptyState.classList.add('hidden');
             dom.resultContainer.classList.add('hidden');
             dom.errorCard.classList.add('hidden');
@@ -1015,28 +996,22 @@
             dom.loadingDetails.textContent = `Auditing accounts for latest mail from "${cleanDomain}"...`;
 
             try {
-                // Fetch in parallel across all configured accounts
                 const results = await Promise.all(
                     CONFIG.accounts.map(acc => fetchAccountEmail(acc, cleanDomain))
                 );
-
                 renderResults(results);
             } catch (err) {
                 showError("Scan Failed", err.message || "An unexpected error occurred during execution.");
             }
         }
 
-        // Auto-fetch immediately upon paste
         dom.domainInput.addEventListener('paste', (e) => {
             const pastedText = (e.clipboardData || window.clipboardData).getData('text');
             if (pastedText && pastedText.trim().length > 0) {
-                setTimeout(() => {
-                    runCheck(pastedText);
-                }, 30);
+                setTimeout(() => runCheck(pastedText), 30);
             }
         });
 
-        // Trigger on Enter
         dom.domainInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
@@ -1044,12 +1019,8 @@
             }
         });
 
-        // Manual Check button
-        dom.btnScan.addEventListener('click', () => {
-            runCheck();
-        });
+        dom.btnScan.addEventListener('click', () => runCheck());
 
-        // Clear action
         dom.btnClear.addEventListener('click', () => {
             dom.domainInput.value = '';
             dom.resultContainer.classList.add('hidden');
@@ -1057,24 +1028,6 @@
             dom.loadingState.classList.add('hidden');
             dom.emptyState.classList.remove('hidden');
             dom.domainInput.focus();
-        });
-
-        // 1-Click Copy subject line
-        dom.btnCopySubject.addEventListener('click', () => {
-            const text = dom.resultSubject.value;
-            if (!text) return;
-
-            const temp = document.createElement('textarea');
-            temp.value = text;
-            document.body.appendChild(temp);
-            temp.select();
-            try {
-                document.execCommand('copy');
-                showToast("Subject line copied to clipboard!");
-            } catch (err) {
-                showToast("Failed to copy", true);
-            }
-            document.body.removeChild(temp);
         });
     </script>
 </body>
