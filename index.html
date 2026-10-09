@@ -107,7 +107,7 @@
                 </div>
                 <div class="flex items-center justify-between text-slate-300">
                     <span class="text-slate-400">Master Nodes</span>
-                    <span id="sidebar-accounts-count" class="font-mono bg-slate-900 border border-slate-700/80 px-2.5 py-0.5 rounded-lg text-emerald-300 font-bold">12 Active</span>
+                    <span id="sidebar-accounts-count" class="font-mono bg-slate-900 border border-slate-700/80 px-2.5 py-0.5 rounded-lg text-emerald-300 font-bold">4 Active</span>
                 </div>
             </div>
         </aside>
@@ -121,7 +121,7 @@
                         <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
                             Subject Line & Delivery Monitor
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">Audit last 3 incoming subject lines across <span id="header-accounts-count" class="font-semibold text-indigo-400">12</span> active accounts with real-time landing analysis.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">Audit last 3 incoming subject lines across <span id="header-accounts-count" class="font-semibold text-indigo-400">4</span> active accounts with real-time landing analysis.</p>
                     </div>
                     <div id="active-mode-badge" class="self-start sm:self-auto px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-slate-500"></span> System Idle
@@ -217,20 +217,20 @@
                         </div>
                     </div>
 
-                    <!-- Email Preview Action Trigger -->
+                    <!-- Email Preview Action Trigger (Restricted to kartikdelay) -->
                     <div id="preview-trigger-container" class="hidden pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-eye text-sm"></i>
                             </div>
                             <div>
-                                <h4 id="preview-trigger-title" class="text-sm font-bold text-slate-200">Email Found in Target Account</h4>
-                                <p id="preview-trigger-desc" class="text-xs text-slate-400">View safe sandboxed preview pulled from node <strong class="text-slate-300 font-semibold">musk9090</strong>.</p>
+                                <h4 id="preview-trigger-title" class="text-sm font-bold text-slate-200">Email Found in Inspection Node</h4>
+                                <p id="preview-trigger-desc" class="text-xs text-slate-400">Inspect safe, sandboxed email payload pulled exclusively from <strong class="text-indigo-400 font-semibold">kartikdelay</strong>.</p>
                             </div>
                         </div>
                         <button id="show-preview-btn" type="button" class="w-full sm:w-auto px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-semibold tracking-wide transition-all border border-slate-700 flex items-center justify-center gap-2 shadow-sm">
                             <i class="fa-solid fa-envelope-open-text text-indigo-400"></i>
-                            <span>Show Mail Preview</span>
+                            <span>Inspect Mail (kartikdelay)</span>
                         </button>
                     </div>
                 </div>
@@ -313,39 +313,50 @@
         </div>
     </div>
 
-    <!-- Safe Mail Preview Modal -->
-    <div id="preview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-200">
+    <!-- Read-Only Mail Inspector Modal (Strictly Read-Only Sandbox) -->
+    <div id="preview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-200">
         <div class="bg-slate-900 border border-slate-800 w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] sm:max-h-[85vh]">
             <!-- Modal Header -->
             <div class="px-5 sm:px-6 py-4 border-b border-slate-800 bg-slate-950 flex items-center justify-between">
-                <div>
-                    <span class="text-[10px] bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Node Audit</span>
-                    <h3 id="modal-subject" class="text-sm sm:text-base font-bold text-white mt-1 line-clamp-1">Email Subject Line</h3>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Read-Only Viewer</span>
+                            <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full font-mono">Interactions Disabled</span>
+                        </div>
+                        <h3 id="modal-subject" class="text-sm sm:text-base font-bold text-white mt-1 line-clamp-1">Email Subject Line</h3>
+                    </div>
                 </div>
                 <button id="close-modal-btn" type="button" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-all text-sm shrink-0 border border-slate-700">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
+
             <!-- Modal Metadata Header -->
             <div class="px-5 sm:px-6 py-3 bg-slate-900 border-b border-slate-800 flex flex-wrap gap-2.5 sm:gap-4 items-center text-[11px] sm:text-xs text-slate-400 font-medium">
                 <div>
-                    <span class="text-slate-500">Account:</span>
-                    <span id="modal-account" class="font-bold text-slate-200">musk9090</span>
+                    <span class="text-slate-500">Source Node:</span>
+                    <span id="modal-account" class="font-bold text-indigo-400 font-mono">kartikdelay</span>
                 </div>
                 <div class="w-1 h-1 rounded-full bg-slate-700 hidden sm:block"></div>
                 <div>
-                    <span class="text-slate-500">Timestamp:</span>
+                    <span class="text-slate-500">Received:</span>
                     <span id="modal-time" class="font-mono text-slate-200">Jun 8 @ 14:30:10</span>
                 </div>
                 <div class="w-1 h-1 rounded-full bg-slate-700 hidden sm:block"></div>
                 <div>
                     <span class="text-slate-500">Relative Delivery:</span>
-                    <span id="modal-seconds-ago" class="font-mono text-indigo-400 font-bold">120 seconds ago</span>
+                    <span id="modal-seconds-ago" class="font-mono text-emerald-400 font-bold">120 seconds ago</span>
                 </div>
             </div>
+
             <!-- Modal Body Sandbox Viewport -->
             <div class="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-950 relative min-h-[280px] sm:min-h-[350px]">
-                <div id="modal-body-fallback" class="hidden text-slate-300 whitespace-pre-wrap leading-relaxed font-mono text-xs bg-slate-900 p-5 rounded-2xl border border-slate-800"></div>
+                <div id="modal-body-fallback" class="hidden text-slate-300 whitespace-pre-wrap leading-relaxed font-mono text-xs bg-slate-900 p-5 rounded-2xl border border-slate-800 select-text"></div>
+                <!-- sandbox without allow-scripts, allow-forms, allow-popups guarantees safe view-only mode -->
                 <iframe id="modal-body-frame" class="w-full h-full min-h-[300px] sm:min-h-[380px] border border-slate-800 rounded-2xl bg-white hidden" sandbox="allow-same-origin"></iframe>
             </div>
         </div>
@@ -427,7 +438,7 @@
         document.getElementById('header-accounts-count').textContent = CONFIG.accounts.length;
 
         /**
-         * Pure Web Audio API chime generator (plays without external audio file download)
+         * Pure Web Audio API chime generator (independent of external audio dependencies)
          */
         function playSuccessChime() {
             try {
@@ -435,7 +446,7 @@
                 if (!AudioContext) return;
                 const ctx = new AudioContext();
 
-                const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6 chord arpeggio
+                const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6 arpeggio
                 notes.forEach((freq, idx) => {
                     const osc = ctx.createOscillator();
                     const gain = ctx.createGain();
@@ -586,6 +597,7 @@
                     else if (labels.includes('INBOX')) landing = 'INBOX';
 
                     return { 
+                        id: m.id,
                         subject, 
                         dateStr, 
                         timeStr, 
@@ -600,23 +612,71 @@
             }
         }
 
+        /**
+         * Open read-only safe email viewer strictly for kartikdelay
+         */
+        window.openEmailInspector = function(msgIndex) {
+            const kartikResult = lastScanResults.find(item => item.accName === 'kartikdelay');
+            if (!kartikResult || !kartikResult.subjects || !kartikResult.subjects[msgIndex]) {
+                showToast("View Restricted", "Mail inspection is only authorized from the kartikdelay node.");
+                return;
+            }
+
+            const targetMail = kartikResult.subjects[msgIndex];
+
+            dom.modalSubject.textContent = targetMail.subject;
+            dom.modalAccount.textContent = `kartikdelay (Primary Inspection Node)`;
+            dom.modalTime.textContent = `${targetMail.dateStr} @ ${targetMail.timeStr}`;
+            dom.modalSecondsAgo.textContent = `${targetMail.secondsAgo.toLocaleString()} seconds ago`;
+
+            if (targetMail.body && targetMail.body.includes('<')) {
+                dom.modalBodyFallback.classList.add('hidden');
+                dom.modalBodyFrame.classList.remove('hidden');
+
+                // Enforce STRICT read-only sandbox: deactivate clicks, prevent tab-outs, disable styling manipulation
+                const safeCSS = `
+                    <style>
+                        html, body {
+                            user-select: text !important;
+                            cursor: default !important;
+                        }
+                        a, a *, [href], button, input, select, textarea, form {
+                            pointer-events: none !important;
+                            cursor: default !important;
+                            text-decoration: none !important;
+                        }
+                    </style>
+                `;
+                dom.modalBodyFrame.srcdoc = safeCSS + targetMail.body;
+            } else {
+                dom.modalBodyFrame.classList.add('hidden');
+                dom.modalBodyFallback.classList.remove('hidden');
+                dom.modalBodyFallback.textContent = targetMail.body || targetMail.snippet || "No body content parsed.";
+            }
+
+            dom.previewModal.classList.remove('hidden');
+            setTimeout(() => {
+                dom.previewModal.classList.remove('opacity-0');
+            }, 20);
+        };
+
         function renderRow(accConfig, domain, subjects, mode) {
             const row = document.createElement('tr');
             row.className = "hover:bg-slate-800/40 transition-colors animate-fade-in flex flex-col sm:table-row border-b sm:border-b-0 border-slate-800 pb-4 sm:pb-0 mb-4 sm:mb-0";
             
             const accName = accConfig.name;
             const isOpener = accConfig.type === "Opener";
-            const isMuskan = (accName === 'muskansharma90' || accName === 'musk9090');
+            const isKartik = (accName === 'kartikdelay');
 
             const typeBadgeHtml = isOpener 
                 ? `<span class="inline-flex items-center gap-1 text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-md font-semibold mt-0.5"><i class="fa-solid fa-envelope-open text-[8px]"></i> Opener</span>`
                 : `<span class="inline-flex items-center gap-1 text-[10px] bg-slate-800 text-slate-400 border border-slate-700 px-2 py-0.5 rounded-md font-semibold mt-0.5"><i class="fa-solid fa-lock text-[8px]"></i> Non-Opener</span>`;
 
-            const accountLabel = isMuskan 
+            const accountLabel = isKartik 
                 ? `<div class="flex flex-col">
                     <div class="flex items-center gap-2 font-bold text-white">
                       <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>${accName}
-                      <span class="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-1.5 py-0.5 rounded font-mono">TARGET NODE</span>
+                      <span class="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-1.5 py-0.5 rounded font-mono">INSPECT NODE</span>
                     </div>
                     <div class="mt-0.5">${typeBadgeHtml}</div>
                    </div>` 
@@ -652,6 +712,13 @@
                     
                     const folderIcon = isInboxMode ? 'fa-inbox' : 'fa-triangle-exclamation';
 
+                    // Only kartikdelay gets the active inspect button
+                    const inspectButtonHtml = isKartik ? `
+                        <button type="button" onclick="openEmailInspector(${i})" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-indigo-600/30 hover:bg-indigo-600 text-indigo-300 hover:text-white border border-indigo-500/40 text-[10px] font-bold transition-all shadow-sm">
+                            <i class="fa-solid fa-eye text-[9px]"></i> Inspect
+                        </button>
+                    ` : '';
+
                     return `
                         <div class="mb-2.5 last:mb-0 p-3 rounded-2xl bg-slate-950/70 border border-slate-800 text-xs shadow-inner">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 mb-1.5">
@@ -659,9 +726,12 @@
                                     <span class="w-4 h-4 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px] flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">${i+1}</span>
                                     <span class="break-words line-clamp-2 sm:line-clamp-1 flex-1 leading-snug">${escapeHtml(s.subject)}</span>
                                 </div>
-                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold border ${badgeStyle} shrink-0 self-start sm:self-auto">
-                                    <i class="fa-solid ${folderIcon} text-[9px]"></i> ${s.landing}
-                                </span>
+                                <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-bold border ${badgeStyle}">
+                                        <i class="fa-solid ${folderIcon} text-[9px]"></i> ${s.landing}
+                                    </span>
+                                    ${inspectButtonHtml}
+                                </div>
                             </div>
                             
                             <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] text-slate-400 font-mono mt-1 pt-2 border-t border-slate-800/80">
@@ -776,7 +846,7 @@
                 }))
                 .sort((a, b) => b.count - a.count);
 
-            // CHECK FOR 100% INBOX CONVERGENCE
+            // Trigger 100% Inbox celebration
             const has100PercentInbox = sortedInboxSubjects.some(item => item.percentage === 100);
             if (has100PercentInbox && mode === 'inbox') {
                 const perfectSubject = sortedInboxSubjects.find(item => item.percentage === 100)?.subject;
@@ -810,13 +880,14 @@
                 dom.inboxSummaryContainer.classList.add('hidden');
             }
 
-            const muskanResult = results.find(item => item.accName === "muskansharma90" || item.accName === "musk9090");
-            const hasMuskanMails = muskanResult && muskanResult.subjects && muskanResult.subjects.length > 0;
+            // Exclusively check kartikdelay for preview inspection
+            const kartikResult = results.find(item => item.accName === "kartikdelay");
+            const hasKartikMails = kartikResult && kartikResult.subjects && kartikResult.subjects.length > 0;
 
-            if (hasMuskanMails) {
+            if (hasKartikMails) {
                 dom.previewTrigger.classList.remove('hidden');
-                dom.previewTriggerTitle.textContent = `Mail Detected in Muskan's Account (${mode.toUpperCase()})`;
-                dom.previewTriggerDesc.innerHTML = `Active ${mode.toUpperCase()} payload verified. Click button to inspect HTML structure safely.`;
+                dom.previewTriggerTitle.textContent = `Mail Detected in kartikdelay Node (${mode.toUpperCase()})`;
+                dom.previewTriggerDesc.innerHTML = `Active ${mode.toUpperCase()} payload retrieved. Inspection authorized for this node.`;
             } else {
                 dom.previewTrigger.classList.add('hidden');
             }
@@ -919,47 +990,18 @@
         });
 
         dom.showPreviewBtn.addEventListener('click', () => {
-            const muskanResult = lastScanResults.find(item => item.accName === 'muskansharma90' || item.accName === 'musk9090');
-            if (!muskanResult || !muskanResult.subjects || muskanResult.subjects.length === 0) {
-                showToast("Preview Unavailable", "No subject data retrieved for node.");
+            // Find kartikdelay specifically
+            const kartikResult = lastScanResults.find(item => item.accName === 'kartikdelay');
+            if (!kartikResult || !kartikResult.subjects || kartikResult.subjects.length === 0) {
+                showToast("Node Unavailable", "No email message data available under kartikdelay.");
                 return;
             }
 
             const activeSubject = dom.commonInput.value;
-            let targetMail = muskanResult.subjects.find(s => s.subject === activeSubject);
-            if (!targetMail) targetMail = muskanResult.subjects[0];
+            let targetIdx = kartikResult.subjects.findIndex(s => s.subject === activeSubject);
+            if (targetIdx === -1) targetIdx = 0;
 
-            if (targetMail) {
-                dom.modalSubject.textContent = targetMail.subject;
-                dom.modalAccount.textContent = `${muskanResult.accName} (Muskan Sharma)`;
-                dom.modalTime.textContent = `${targetMail.dateStr} @ ${targetMail.timeStr}`;
-                dom.modalSecondsAgo.textContent = `${targetMail.secondsAgo.toLocaleString()} seconds ago`;
-
-                if (targetMail.body && targetMail.body.includes('<')) {
-                    dom.modalBodyFallback.classList.add('hidden');
-                    dom.modalBodyFrame.classList.remove('hidden');
-
-                    const safeCSS = `
-                        <style>
-                            a, a *, [href], button, input {
-                                pointer-events: none !important;
-                                cursor: default !important;
-                                text-decoration: none !important;
-                            }
-                        </style>
-                    `;
-                    dom.modalBodyFrame.srcdoc = safeCSS + targetMail.body;
-                } else {
-                    dom.modalBodyFrame.classList.add('hidden');
-                    dom.modalBodyFallback.classList.remove('hidden');
-                    dom.modalBodyFallback.textContent = targetMail.body || targetMail.snippet || "No body content parsed.";
-                }
-
-                dom.previewModal.classList.remove('hidden');
-                setTimeout(() => {
-                    dom.previewModal.classList.remove('opacity-0');
-                }, 20);
-            }
+            openEmailInspector(targetIdx);
         });
 
         const hidePreviewModal = () => {
