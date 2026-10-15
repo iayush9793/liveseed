@@ -375,14 +375,44 @@
 
     <script>
         const CONFIG = {
+            // Default credentials used across accounts
             defaultClientId: "707901165841-938emg3s0i65g4j1nebqqf33kr65rblp.apps.googleusercontent.com",
-            defaultClientSecret: "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",
+            defaultClientSecret: "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,
             
-            accounts: [
-                { name: "kartikdelay", type: "Opener", token: "1//0gtz8q_WzZKyMCgYIARAAGBASNwF-L9IrmicCK33BUKlHmC1bewgRAjN_9HBUQRrsG1C5yPc-7vsfdNSqaT6NETtDjs7T2V2M6yI" },
-                { name: "ashwindelay", type: "Opener", token: "1//0gg0TkoL9UvaqCgYIARAAGBASNwF-L9Ir8W05y0uYwL1pVezr5wYl5Vohzm5Xsa1HqJGGCJrnc7_W5AVYpeEBOFoey_pDT5Om8Bw" },
-                { name: "ashwinkartiknonop", type: "Non-Opener", token: "1//0gvvPhN2T-qFcCgYIARAAGBASNwF-L9Irvn9dNlXAnf9bIcAeWdHUf710JyHvgOhpyuURZn99EyFHq0Q587IE2Wu7cIJm-JdP4PU" },
-                { name: "newnonop5", type: "Non-Opener", token: "1//0gzr0vvfV_J5uCgYIARAAGBASNwF-L9IrYgS1zaaA5nuq70nluZ8t3aZ3P2_v3tIXZWo6wsLEGuMYnDKwqKgt4jSXG5cBfSphZlY" }
+            // Accounts array: specify custom clientId/clientSecret per account if needed
+         accounts: [
+                { name: "kartikdelay", type: "Opener", token: "1//0gtz8q_WzZKyMCgYIARAAGBASNwF-L9IrmicCK33BUKlHmC1bewgRAjN_9HBUQRrsG1C5yPc-7vsfdNSqaT6NETtDjs7T2V2M6yI" },
+                { name: "ashwindelay", type: "Opener", token: "1//0gg0TkoL9UvaqCgYIARAAGBASNwF-L9Ir8W05y0uYwL1pVezr5wYl5Vohzm5Xsa1HqJGGCJrnc7_W5AVYpeEBOFoey_pDT5Om8Bw" },
+                { name: "ashwinkartiknonop", type: "Non-Opener", token: "1//0gvvPhN2T-qFcCgYIARAAGBASNwF-L9Irvn9dNlXAnf9bIcAeWdHUf710JyHvgOhpyuURZn99EyFHq0Q587IE2Wu7cIJm-JdP4PU" },
+                { name: "newnonop5", type: "Non-Opener", token: "1//0gzr0vvfV_J5uCgYIARAAGBASNwF-L9IrYgS1zaaA5nuq70nluZ8t3aZ3P2_v3tIXZWo6wsLEGuMYnDKwqKgt4jSXG5cBfSphZlY" },
+                  { 
+                    name: "heenaguptaopn", 
+                    type: "Opener", 
+                    token: "1//0g_m2eiIDKjCJCgYIARAAGBASNwF-L9IrUAXQchNOI3g2jEEZfT670RMYCrVuqFjBNw_Uidwk8Yp0f9TTg6l2aGe7jqdYG5uR9fo",
+                    clientId: "993990204222-qcknpbirqoh9mp2951qfvm4vv7imk087.apps.googleusercontent.com",
+                    clientSecret: "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"
+                },
+              { 
+                    name: "mohiniagopn", 
+                    type: "Opener", 
+                    token: "1//0gQB0SkGpOtfJCgYIARAAGBASNwF-L9IreXloHTzRyml1sLpOystS_R_8bH5j_hzY5FzI2Hsj2s4s0DyelBXgmfelRuj4VXN6gSo",
+                    clientId: "993990204222-qcknpbirqoh9mp2951qfvm4vv7imk087.apps.googleusercontent.com",
+                    clientSecret: "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"
+                },
+              { 
+                    name: "srishtiguptanonopn", 
+                    type: "Non-Opener", 
+                    token: "1//0g1C75vTenZJfCgYIARAAGBASNwF-L9Ir0iqeR_jQanVEMcWqYEJ4qCxNn6qeG0OHKkcSPkiagfXArxQBCamUdgaPNMpKIuYcj9o",
+                    clientId: "993990204222-qcknpbirqoh9mp2951qfvm4vv7imk087.apps.googleusercontent.com",
+                    clientSecret: "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"
+                },
+              { 
+                    name: "jasminesandallasnonopn", 
+                    type: "Non-Opener", 
+                    token: "1//0gPzLNn9_KRgyCgYIARAAGBASNwF-L9IrsR_yLYmw-b5M9n1pNx-ss0DzZhuXHdDokqRAuL_Ulw_l0CPefxT6fuPDHEdB5RmHJtA",
+                    clientId: "993990204222-qcknpbirqoh9mp2951qfvm4vv7imk087.apps.googleusercontent.com",
+                    clientSecret: "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"
+                },
             ]
         };
 
